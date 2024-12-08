@@ -15,4 +15,15 @@ public class User {
         return password;
     }
 
+    @Override
+    public boolean equals(Object obj){
+        if(obj == this) return true;
+        if((obj == null) || obj.getClass() != this.getClass()) return false;
+
+        User anotherUser = (User) obj;
+        return anotherUser.getUsername().equals(this.getUsername())
+                &&
+                anotherUser.getPassword().equals(this.getPassword());
+    }
+
 }
