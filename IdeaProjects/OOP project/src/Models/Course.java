@@ -1,5 +1,5 @@
 package Models;
-import java.util.List;
+import java.util.*;
 public class Course {
     private String title;
     private String courseId;
@@ -10,7 +10,7 @@ public class Course {
         this.title = title;
         this.courseId = courseId;
         this.credits = credits;
-
+        this.availableSemesters = new ArrayList<>();
     }
     public String getTitle() {
         return title;
@@ -29,6 +29,21 @@ public class Course {
     }
     public void setCredits(int credits) {
         this.credits = credits;
+    }
+    public void addAvailableSemester(Semester semester) {
+        if (!availableSemesters.contains(semester)) {
+            availableSemesters.add(semester);
+        }
+    }
+    public void removeAvailableSemester(Semester semester) {
+        availableSemesters.remove(semester);
+    }
+
+    public void printAvailableSemesters() {
+        System.out.println("Available Semesters are : ");
+        for (Semester semester : availableSemesters) {
+            System.out.println(semester + "  ");
+        }
     }
 
     @Override
