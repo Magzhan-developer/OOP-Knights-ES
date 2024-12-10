@@ -1,9 +1,11 @@
 package Models;
-
+import java.util.List;
 public class Course {
-    private String title; // Name of the course
-    private String courseId; // Unique code for the course
+    private String title;
+    private String courseId;
     private int credits;
+    private List<Semester> availableSemesters; // List of semesters when the course is available
+
     public Course(String title , String courseId, int credits) {
         this.title = title;
         this.courseId = courseId;
