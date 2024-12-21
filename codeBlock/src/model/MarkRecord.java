@@ -1,3 +1,4 @@
+/*
 import java.util.Date;
 
 public class MarkRecord {
@@ -34,4 +35,4 @@ public class MarkRecord {
     public Date getLessonDate() {
         return lessonDate;
     }
-}
+}*/

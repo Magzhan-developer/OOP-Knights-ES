@@ -1,6 +1,6 @@
-package codeBlock.src.model;
+package codeBlock.src.enums;
 
-public enum ROLES {
+public enum roles {
     ADMIN,
     USER,
     TEACHER,

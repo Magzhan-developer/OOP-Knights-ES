@@ -1,14 +1,16 @@
 package codeBlock.src.model;
 
+import codeBlock.src.enums.roles;
+
 import java.util.Iterator;
 import java.util.List;
 
 public class Admin extends User {
-    Admin(String username,String password){
+    public Admin(String username,String password){
         super(username,password);
     }
 
-    public static void setRoleForUsers (List<User> users,String username,ROLES role){
+    /*public static void setRoleForUsers (List<User> users, String username, roles role){
         int count = 0;
         for (User user : users) {
             if (user.getUsername().equals(username)) {
@@ -20,6 +22,6 @@ public class Admin extends User {
         if (count == users.size()) {
             System.out.println("Пользователь с таким именем не существует!");
         }
-    }
+    }*/
 
 }

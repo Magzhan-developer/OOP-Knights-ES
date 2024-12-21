@@ -1,3 +1,4 @@
+/*
 import java.util.ArrayList;
 import java.util.List;
 
@@ -142,4 +143,4 @@ public class Teacher extends Employee {
             System.out.println("Ошибка: вы не ведете этот курс.");
         }
     }
-}
+}*/

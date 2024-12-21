@@ -1,6 +1,7 @@
 package codeBlock.src.handlers;
 
 import codeBlock.src.model.User;
+import codeBlock.src.model.UserSessionManager;
 
 import java.util.Scanner;
 import java.util.Vector;
@@ -24,6 +25,7 @@ public class LoginHandler {
                     userFound = true;
                     if (user.getPassword().equals(password)) {
                         System.out.println("Вы успешно вошли в систему");
+                        UserSessionManager.getInstance().setCurrentUser(user);
                         return true;
                     } else {
                         System.out.println("Неправильный пароль!");
