@@ -6,6 +6,7 @@ public class Lesson {
     private Course course;
     private LessonType lessonType;
     private Language language;
+
     private SortedSet<Student> students;
 
     public Lesson(Teacher teacher, Course course, LessonType lessonType, Language language) {
@@ -14,7 +15,6 @@ public class Lesson {
         this.setLanguage(language);
         this.setLessonType(lessonType);
     }
-
 
     public Teacher getTeacher() {
         return teacher;

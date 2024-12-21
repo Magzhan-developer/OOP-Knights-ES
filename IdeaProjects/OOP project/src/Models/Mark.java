@@ -14,7 +14,20 @@ public class Mark {
     public double calculateTotalGrade() {
         return (att1 * 0.3) + (att2 * 0.3) + (finalExam * 0.4);
     }
-
+    public double calculateGPA(int credits) {
+        double totalGrade = calculateTotalGrade();
+        double gpa = 0.0;
+        if (totalGrade >= 90) {
+            gpa = 4.0;
+        } else if (totalGrade >= 80) {
+            gpa = 3.0;
+        } else if (totalGrade >= 70) {
+            gpa = 2.0;
+        } else if (totalGrade >= 60) {
+            gpa = 1.0;
+        }
+        return gpa * credits;
+    }
     private double validateGrade(double grade) {
         try {
             if (grade < 0 || grade > 100) {
